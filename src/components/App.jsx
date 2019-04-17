@@ -1,20 +1,20 @@
 import React from 'react'
-import Header from './Header'
-import TicketList from './TicketList'
-import MyStyledComponent from './MyStyledComponent'
+import Header from './Header';
+import Schedule from './Schedule';
+import Produce from './Produce';
 import { Switch, Route } from 'react-router-dom';
-import NewTicketForm from './NewTicketForm';
 
 function App(){
+  const appStyle ={
+    fontFamily: 'Helvetica'
+  }
   return (
-    <div>
+    <div style={appStyle}>
       <Header/>
       <Switch>
-        <Route exact path='/' component={TicketList} />
-        <Route path='/newticket' component={NewTicketForm} />
+        <Route exact path='/' component={Schedule} />
+        <Route path='/produce' component={Produce} />
       </Switch>
-      // <TicketList/>
-      // <MyStyledComponent/>
     </div>
   )
 }
